@@ -1,14 +1,10 @@
-var admin       = require('../controllers/admin'),
-    express     = require('express'),
+var admin = require('../controllers/admin'),
+	express = require('express'),
+	adminRoutes;
 
-    adminRoutes;
-
-adminRoutes = function () {
-    var router = express.Router();
-
-    router.get('*', admin.index);
-
-    return router;
+adminRoutes = function() {
+	var router = express.Router();
+	router.get('*', admin.index);
+	return router;
 };
-
 module.exports = adminRoutes;

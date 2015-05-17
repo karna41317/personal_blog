@@ -23,7 +23,7 @@ ghost().then(function (ghostServer) {
     parentApp.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
 
     // Let ghost handle starting our server instance.
-    ghostServer.start(parentApp);
+	ghostServer.start(parentApp);
 }).catch(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
 });
